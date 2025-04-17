@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .hero {
+    background: url("https://thumbs.dreamstime.com/b/mystery-cave-sci-fi-building-video-games-digital-cg-artwork-concept-illustration-realistic-cartoon-style-background-78601937.jpg") no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: white;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    animation: floatLogo 4s ease-in-out infinite;
+    display: inline-block;
+  }
+  
+  @keyframes floatLogo {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #00ffcc;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-btn {
+    background: #00ffcc;
+    color: black;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 0 10px #00ffcc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulseZoom 2s infinite;
+  }
+  
+  .cta-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00ffcc, 0 0 10px #00ffcc;
+  }
+  
+  @keyframes pulseZoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
